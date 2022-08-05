@@ -1,11 +1,13 @@
-import { useState } from 'react'
- 
+import { useState } from "react";
+import GlobalStyles from "./styles/GlobalStyles";
+import Layout from "./components/Layout";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <h1>OI</h1>
-  )
+    <>
+      <Layout />
+      <GlobalStyles />
+    </>
+  );
 }
 
-export default App
+export default App;
