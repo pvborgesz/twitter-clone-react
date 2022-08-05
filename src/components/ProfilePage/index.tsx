@@ -28,10 +28,12 @@ const ProfilePage: React.FC = () => {
 
           <p>
             Fullstack Developer 🧑🏻‍💻. See my job in{" "}
-            <a href="https://github.com/pvborgesz">Github</a> or{" "}
+            <a href="https://github.com/pvborgesz">Github</a> or <br />
             <a href="https://www.linkedin.com/in/paulo-victor-borges-75102121a/">
               Linkedin
             </a>
+            <br />
+            Projeto desenvolvido para prática de Styled Components e React-TS.
           </p>
 
           <ul>
