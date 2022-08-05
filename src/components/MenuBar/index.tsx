@@ -14,6 +14,7 @@ import {
   ProfileData,
   ExitIcon,
   Avatar,
+  FavoriteIcon,
 } from "./styles";
 
 const MenuBar: React.FC = () => {
@@ -22,6 +23,7 @@ const MenuBar: React.FC = () => {
       <Container>
         <Topside>
           <Logo />
+
           <MenuButton>
             <HomeIcon />
             <span>Página Inicial</span>
@@ -38,7 +40,7 @@ const MenuBar: React.FC = () => {
           </MenuButton>
 
           <MenuButton>
-            <HomeIcon />
+            <FavoriteIcon />
             <span>Favoritados</span>
           </MenuButton>
 
@@ -47,7 +49,9 @@ const MenuBar: React.FC = () => {
             <span>Perfil</span>
           </MenuButton>
 
-          <Button>Tweetar</Button>
+          <Button>
+            <span>Tweetar</span>
+          </Button>
         </Topside>
 
         <Botside>

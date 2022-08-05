@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+
 import {
   Home,
   Notifications,
@@ -24,8 +25,10 @@ export const Container = styled.div`
     padding: 9px 19px 20px;
 
     max-height: 100vh;
+    overflow-y: auto;
   }
 `;
+
 export const Topside = styled.div`
   display: flex;
   flex-direction: column;
@@ -43,6 +46,8 @@ export const Logo = styled(Rocketseat)`
   > path {
     fill: var(--twitter);
   }
+
+  margin-bottom: 20px;
 `;
 
 export const MenuButton = styled.button`
@@ -62,6 +67,7 @@ export const MenuButton = styled.button`
       font-weight: bold;
       font-size: 19px;
     }
+
     padding-right: 15px;
   }
 
@@ -75,8 +81,8 @@ export const MenuButton = styled.button`
   & + button:last-child {
     margin-top: 33px;
 
-    /* width: 44px;
-        height: 40px; */
+    width: 40px;
+    height: 40px;
 
     > span {
       display: none;
@@ -100,16 +106,16 @@ export const MenuButton = styled.button`
   }
 
   &:hover,
-  &:active {
+  &.active {
     span,
     svg {
-      color: var(--twiter);
+      color: var(--twitter);
       fill: var(--twitter);
     }
   }
 `;
 
-const iconCss = css`
+const iconCSS = css`
   flex-shrink: 0;
 
   width: 30px;
@@ -118,19 +124,19 @@ const iconCss = css`
 `;
 
 export const HomeIcon = styled(Home)`
-  ${iconCss}
+  ${iconCSS}
 `;
-
 export const BellIcon = styled(Notifications)`
-  ${iconCss}
+  ${iconCSS}
 `;
-
 export const EmailIcon = styled(Email)`
-  ${iconCss}
+  ${iconCSS}
 `;
-
+export const FavoriteIcon = styled(FavoriteBorder)`
+  ${iconCSS}
+`;
 export const ProfileIcon = styled(Person)`
-  ${iconCss}
+  ${iconCSS}
 `;
 
 export const Botside = styled.div`
@@ -152,7 +158,7 @@ export const Avatar = styled.div`
 
 export const ProfileData = styled.div`
   display: none;
-
+  margin: 5vh;
   @media (min-width: 1280px) {
     display: flex;
     flex-direction: column;
@@ -161,7 +167,6 @@ export const ProfileData = styled.div`
     font-size: 14px;
 
     > span {
-      font-weight: normal;
       color: var(--gray);
     }
   }
@@ -175,7 +180,7 @@ export const ExitIcon = styled(ExitToApp)`
     width: 25px;
     height: 25px;
     color: var(--white);
-    maring-left: 30px;
+    margin-left: 30px;
     cursor: pointer;
 
     &:hover {
